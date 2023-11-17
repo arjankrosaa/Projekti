@@ -129,11 +129,17 @@ a:hover{
 }
 
 @media (max-width: 800px) {
+    
     .deget-elements h1{
        font-size: 16px;
        
     }
     .deget-elements p{
+        font-size: 8px;
+    }
+
+
+    .projektet-elements p{
         font-size: 8px;
     }
 
@@ -173,3 +179,37 @@ h3{
     }
 }
 
+
+.projektet-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projektet-img img{
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    border: 1px black solid;
+}
+
+.projektet-img img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.projektet-elements h1{
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+@media (max-width: 800px) {
+    
+
+
+    .projektet-elements h1{
+        font-size: 16px;
+    }
+}
