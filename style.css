@@ -205,6 +205,53 @@ h3{
     
 }
 
+
+
+.dimension-calculation{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0px;
+    background-color: rgba(220, 220, 220, 0.295);
+    padding-bottom: 40px;
+}
+
+.dimension-calculation h1{
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.calculator{
+    display: inline-grid;
+
+}
+
+.calculator input{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid var(--primare);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.calculator label{
+    font-size: 23px;
+    padding: 10px 0px;
+}
+
+.calculator img{
+    max-width: 650px;
+    margin: 40px auto;
+
+}
+
+.calculator span{
+    font-size: 20px;
+}
+
+
+
+
 @media (max-width: 800px) {
     
 
@@ -212,4 +259,22 @@ h3{
     .projektet-elements h1{
         font-size: 16px;
     }
+
+    .dimension-calculation p{
+        font-size: 8px;
+    }
+
+    .dimension-calculation h1{
+        font-size: 16px;
+    }
+
+    .calculator input{
+        width: 300px;
+    }
+
+    .calculator img{
+        width: 300px;
+    }
+
+
 }
