@@ -210,7 +210,7 @@ h3{
 .dimension-calculation{
     display: flex;
     justify-content: center;
-    margin: 70px 0px;
+    margin: 70px 0px 0 0;
     background-color: rgba(220, 220, 220, 0.295);
     padding-bottom: 40px;
 }
@@ -276,5 +276,87 @@ h3{
         width: 300px;
     }
 
+
+}
+
+.footer{
+    display: flex;
+    justify-content:space-between;
+    background-color: var(--primare);
+}
+
+.footer-divs{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20%;
+    
+    
+   
+}
+
+.footer-divs a{
+    color: black;
+}
+
+
+.nav-pages{
+    margin: 0 50% 0 0;
+}
+
+.login-pages{
+    margin: 0 50% 0 0;
+}
+
+
+.socialMedia-icon{
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+}
+
+.socialMedia-icon img{
+    width: 30px;
+    padding-right: 20px;
+    
+}
+
+
+.under-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #cf721b
+}
+
+.under-footer a{
+    color: black;
+}
+
+
+@media (max-width: 900px) {
+    .nav-pages{
+        margin: 0 20% 0 0;
+    }
+    
+    .login-pages{
+        margin: 0 20% 0 0;
+    }
+
+    .footer-divs{
+        margin-left:15%;   
+        font-size: 8px;
+    }
+
+    .socialMedia-icon img{
+        width: 20px;
+        padding-right: 5px;
+        
+    }
+
+    .under-footer {
+        font-size: 10px;
+    }
+    .under-footer label{
+        font-size: 10px;
+    }
 
 }
