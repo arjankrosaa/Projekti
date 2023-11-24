@@ -282,7 +282,7 @@ h3{
 .footer{
     display: flex;
     justify-content:space-between;
-    background-color: var(--primare);
+    background-color: var(--grierret);
 }
 
 .footer-divs{
@@ -324,7 +324,7 @@ h3{
 .under-footer{
     display: flex;
     justify-content: space-between;
-    background-color: #cf721b
+    background-color: var(--sekondare)
 }
 
 .under-footer a{
@@ -360,3 +360,7 @@ h3{
     }
 
 }
+
+
+/* projektet css*/
+
