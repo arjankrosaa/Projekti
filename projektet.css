@@ -3,7 +3,7 @@
     align-items: center;
 
     height: 50vh;
-    background-image:
+    background-image:linear-gradient(rgba(30, 21, 4, 0.7),rgba(4,9,30,0.5)),
     url(../Projekti/img/proj.jpg);
     
     background-size: 100% 100%;
@@ -17,3 +17,97 @@
     padding: 0px 90px 0px 90px;
     
 }
+
+
+.category{
+    height: 100vh;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.category h1{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.category-images{
+    display: flex;
+    margin-top: 30px;
+
+    
+
+}
+
+.category-images img{
+    
+    max-width: 400px;
+    margin: 0 20px;
+    aspect-ratio: 3/2;
+
+
+}
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-size: cover;
+}
+
+#images{
+     
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 50px));
+        column-gap: 197px;
+        grid-row-gap: 7px;
+        margin: 18px 100px;
+        margin-bottom: 50px;
+    
+
+}
+
+@media screen and (max-width: 767px) {
+    .category-images {
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+
+    #images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.filter
+{
+    display: flex;
+    justify-content: center;
+}
+
+.button
+{
+    padding: 10px 50px;
+    background-color: var(--primare);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 5px;
+}
+
+.projects{
+    background-color: var(--primare);
+    height: 180px;
+    width: 100%;
+    margin: 70px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
