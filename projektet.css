@@ -100,6 +100,7 @@
     margin: 10px 5px;
 }
 
+
 .projects{
     background-color: var(--primare);
     height: 180px;
@@ -110,4 +111,26 @@
     align-items: center;
 }
 
+.projects-details{
+    display: flex;
+    align-items: center;
+
+}
+
+.projects-details h1{
+    margin: 40px;
+}
+
+.button-projects{
+    padding: 20px 60px;
+    background-color: var(--grierret);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-projects:hover{
+    background-color: var(--sekondare);
+}
 
