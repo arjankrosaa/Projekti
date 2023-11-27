@@ -44,5 +44,5 @@ function NewTab() {
 
       function shfaqPunimet(){
             document.getElementById("shfaq").style.display="block";
-            document.getElementsByClassName("button-projects").style.display="none";
+            document.getElementById("button-projects").style.display="none";
         }

@@ -35,6 +35,8 @@
 .category-images{
     display: flex;
     margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     
 
@@ -58,29 +60,13 @@
 
 #images{
      
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 50px));
-        column-gap: 197px;
-        grid-row-gap: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
         margin: 18px 100px;
         margin-bottom: 50px;
     
 
-}
-
-@media screen and (max-width: 767px) {
-    .category-images {
-        display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    }
-
-
-    #images {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
 
 .filter
