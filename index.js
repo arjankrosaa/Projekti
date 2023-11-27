@@ -46,3 +46,21 @@ function NewTab() {
             document.getElementById("shfaq").style.display="block";
             document.getElementById("button-projects").style.display="none";
         }
+
+
+
+
+        function butoniDjatht(){
+            document.getElementById("first-Photo").style.display="none";
+            document.getElementById("second-Photo" ).style.display="block";
+            
+        
+        
+        }
+
+
+        
+        function butoniMajt(){
+            document.getElementById("second-Photo" ).style.display="none";
+            document.getElementById("first-Photo").style.display="block";
+        }
