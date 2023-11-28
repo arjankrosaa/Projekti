@@ -41,6 +41,8 @@
 }
 
 .card{
+    display: flex;
+    justify-content: center;
     padding: 50px 100px;
     border: none;
     margin: 20px 20px;
