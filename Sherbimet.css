@@ -1,0 +1,91 @@
+.hero-sher{
+    display: flex;
+    align-items: center;
+
+    height: 50vh;
+    background-image:linear-gradient(rgba(30, 21, 4, 0.7),rgba(4,9,30,0.5)),
+    url(../Projekti/img/proj.jpg);
+    
+    background-size: 100% 100%;
+}
+
+.title-sher{
+    font-size: 100px;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 35px;
+    padding: 0px 90px 0px 90px;
+    
+}
+
+
+.services{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.services h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px;
+   
+}
+
+.card{
+    padding: 50px 100px;
+    border: none;
+    margin: 20px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7) , 0 5px 20px 0 rgba(0, 0, 0, 0.7) ;
+    width: 25%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+}
+
+
+.front{
+    backface-visibility: hidden;
+}
+
+.back{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    top: 140px;
+    left: 10px;
+    right: 10px;
+
+}
+
+.back p{
+    font-size: 18px;
+    color: var(--primare);
+
+}
+
+
+.card.flip{
+    transform: rotateY(180deg);
+    -webkit- transform: rotateY(180deg);
+
+}
+
+.card h2{
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--primare);
+    padding-top: 25px;
+
+}

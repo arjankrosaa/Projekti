@@ -64,3 +64,46 @@ function NewTab() {
             document.getElementById("second-Photo" ).style.display="none";
             document.getElementById("first-Photo").style.display="block";
         }
+
+
+        function mouseOver(){
+            document.getElementById("05").style.display="block";
+        }
+
+        function mouseOut(){
+            document.getElementById("05" ).style.display="none";
+        }
+
+
+        function mouseOver06(){
+            document.getElementById("06").style.display="block";
+        }
+
+        function mouseOut06(){
+            document.getElementById("06" ).style.display="none";
+        }
+
+
+        function mouseOver01(){
+            document.getElementById("01").style.display="block";
+        }
+
+        function mouseOut01(){
+            document.getElementById("01" ).style.display="none";
+        }
+
+
+
+
+
+
+
+
+        
+        const cards= document.querySelectorAll(".card");
+
+        function flipCards(){
+            this.classList.toggle("flip");
+        }
+        cards.forEach((card)=>card.addEventListener("click", flipCards) )
+        
