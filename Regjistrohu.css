@@ -1,4 +1,4 @@
-.login{
+.Regjistrohu{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,18 +9,18 @@
 }
 
 
-.login-elements{
+.Regjistrohu-elemnts{
 background-color: white;
-    height: 550px;
-    width: 450px;
+    height: 650px;
+    width: 850px;
 box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7) , 0 5px 20px 0 rgba(0, 0, 0, 0.7) ;
 }
 
 
-.login-form{
+.regjistrohu-form{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     align-items: center;
 }
 
@@ -52,7 +52,7 @@ input{
     cursor: pointer;
     font-size: 19px;
     padding: 10px 0;
-    width: 100px;
+    width: 110px;
     height: 50px;
 
 }
@@ -64,4 +64,5 @@ input{
 .pallogari:hover{
  background-color: white;
 }
+
 
