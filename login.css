@@ -4,7 +4,8 @@
     align-items: center;
     height: 100vh;
     background-image: url(img/login.jpg) ;
-
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -14,6 +15,7 @@ background-color: white;
     height: 550px;
     width: 450px;
 box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7) , 0 5px 20px 0 rgba(0, 0, 0, 0.7) ;
+
 }
 
 

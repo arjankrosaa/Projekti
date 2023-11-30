@@ -115,8 +115,7 @@ function NewTab() {
 
 
 
-
-        function validateform() {
+   /*         function validateform() {
             var emri = document.myform.txt.value;
             var emaili = document.myform.email.value;
             var pershkrimi = document.myform.pershkrimi.value;
@@ -139,7 +138,7 @@ function NewTab() {
                 return false;
             }
         }
-
+*/
 
 
 
@@ -187,5 +186,27 @@ function NewTab() {
                 result.innerText=txtValue + " ❌";
                 result.style.color= 'red';
             }
+        }
+
+        function validateform2(){
+            var result=document.getElementById("result2");
+            var result2=document.getElementById("result3");
+            var pershkrimi = document.myform.pershkrimi.value;
+
+            if(result.style.color=='red'){
+                alert("Emri nuk i plotson kushte.");
+                return false;
+            }
+
+            if(  !(result2.style.color=='green') ){
+                alert("Emaili nuk i plotson kushte.");
+                return false;
+            }
+
+            if (pershkrimi == null || pershkrimi == "") {
+                alert("Pershkrimi nuk mund te jet i zbrazur");
+                return false;
+            }
+
         }
     
