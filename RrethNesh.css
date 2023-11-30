@@ -1,0 +1,67 @@
+.rrethNesh_elements{
+    display: flex;
+    justify-content: space-around;
+ 
+    
+}
+
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact h1{
+    font-size: 40px;
+}
+
+
+.contact-form input{
+    width: 600px;
+    height: 25px;
+    padding: 20px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1) , 0 5px 20px 0 rgba(0, 0, 0, 0.1) ;
+    border-radius: 20px;
+    margin: 10px;
+    border: none;
+}
+
+.contact-form textarea{
+    border: none;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1) , 0 5px 20px 0 rgba(0, 0, 0, 0.1) ;
+    border-radius: 20px;
+    width: 600px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#send-button{
+    background-color: var(--primare);
+    cursor: pointer;
+    font-size: 19px;
+    padding: 10px 0;
+    width: 30%;
+    height: 50px;
+
+}
+
+.contact-form label{
+    font-size: 19px;
+    display: flex;
+    padding: 10px 15px;
+}
+
+.submit-button:hover{
+    background-color: var(--gri);
+    color: var(--primare);
+    transition: 0.5s;
+}
+
+#send-button:hover{
+    background-color: var(--gri);
+    transition: 0.5s;
+}
+
