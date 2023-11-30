@@ -11,6 +11,10 @@ function NewTab() {
             window.open("Projektet.html" , "_self");
         }
 
+    function newTabContact(){
+        window.open("RrethNesh.html" ,"_self" )
+    }
+
 
 
         const butoni=document.querySelectorAll(".button");
@@ -107,3 +111,81 @@ function NewTab() {
         }
         cards.forEach((card)=>card.addEventListener("click", flipCards) )
         
+
+
+
+
+
+        function validateform() {
+            var emri = document.myform.txt.value;
+            var emaili = document.myform.email.value;
+            var pershkrimi = document.myform.pershkrimi.value;
+
+            
+            
+        
+            if (emri == null || emri == "") {
+                alert("Emri eshte i paplotsuar.");
+                return false;
+            }
+        
+            if (emaili == null || emaili == "") {
+                alert("Emaili eshte i paplotsuar.");
+                return false;
+            }
+        
+            if (pershkrimi == null || pershkrimi == "") {
+                alert("Pershkrimi nuk mund te jet i zbrazur");
+                return false;
+            }
+        }
+
+
+
+
+        function getValue(){
+            let txt =document.getElementById("txt");
+            let txtValue= txt.value;
+    
+            let result= document.getElementById("result2");
+            result.innerText=txtValue;
+    
+    
+            if(txtValue.length < '5' || !(txtValue.indexOf(" ") >= 0)){
+                result.innerText=txtValue + " ❌";
+                result.style.color= 'red';
+               }else{
+                result.innerText=txtValue + " ✔";
+                result.style.color= 'green';
+            }
+    
+    }
+        function getValue2(){
+            let txt =document.getElementById("email");
+            let txtValue= txt.value;
+    
+            let result= document.getElementById("result3");
+            result.innerText=txtValue;
+    
+    
+            if( txtValue.includes("@") && txtValue.length > '3' ){
+                result.innerText=txtValue 
+                result.style.color= 'LightCoral';
+                if(txtValue.includes(".")   ){
+                    result.style.color= 'green';
+                    result.innerText=txtValue + " ✔";
+                    if(txtValue.includes(" ")){
+                        result.style.color= 'red';
+                        result.innerText=txtValue + " ❌";
+                    }
+                    
+                }
+    
+               }else{
+                
+    
+                result.innerText=txtValue + " ❌";
+                result.style.color= 'red';
+            }
+        }
+    
