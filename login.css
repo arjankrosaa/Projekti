@@ -37,26 +37,20 @@ input{
     border: none;
 }
 
-
-.submit-button:hover{
-    background-color: var(--gri);
-    color: var(--primare);
-    transition: 0.5s;
-}
-
-#send-button:hover{
-    background-color: var(--gri);
-    transition: 0.5s;
-}
-
-#send-button{
+button{
     background-color: var(--primare);
     cursor: pointer;
     font-size: 19px;
     padding: 10px 0;
     width: 100px;
     height: 50px;
+    border: none;
+    border-radius: 20px;
+}
 
+button:hover{
+    background-color: var(--gri);
+    transition: 0.5s;
 }
 
 .pallogari{
@@ -65,5 +59,10 @@ input{
 
 .pallogari:hover{
  background-color: white;
+}
+
+.error-message{
+    color: red;
+    text-align: right;
 }
 

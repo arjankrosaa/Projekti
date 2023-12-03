@@ -36,31 +36,31 @@
 
     <div class="Regjistrohu">
         <div class="countiner">
-<h4 style="font-size: 20px;color: white;">Regjistrohu</h4>
+
 
             <div class="Regjistrohu-elemnts">
            <h1 style="text-align: center;padding-top: 30px;">LuxeLiving</h1>
-                
+                <div id="error" style="display: flex;justify-content: center;color: red;"></div>
            <div class="regjistrohu-form">
                 <form action="">
-                    <label for="emri">Emri</label> <br>
-                    <input type="text" name="txt"  id="emri"  minlength="7"><br>
+                    <label >Emri</label> <br>
+                    <input type="text"   id="emri" ><br>
 
-                    <label for="mbiemri">Mbiemri</label> <br>
-                    <input type="text" name="txt"  id="emri"  minlength="7"><br>
+                    <label>Mbiemri</label> <br>
+                    <input type="text"   id="mbiemri"  ><br>
 
 
-                <label for="email">Emaili:</label> <br>
-                <input type="email" name="email" id="email" ><br>
+                <label >Emaili:</label> <br>
+                <input type="text"  id="email" ><br>
 
                 
-                <label for="password">Password:</label> <br>
-                <input type="email" name="email" id="email" ><br>
+                <label >Password:</label> <br>
+                <input type="password"  id="password" ><br>
 
-                <label for="password">Perserit Passwordin:</label> <br>
-                <input type="email" name="email" id="email" ><br>
+                <label >Perserit Passwordin:</label> <br>
+                <input type="password"  id="passwordP" ><br>
 
-                <input type="submit" value="Regjistrohu" id="send-button"> 
+                <button type="button" onclick="validateLoginForm()">Regjistrohu</button>
                 <a href="Login.html" class="pallogari" style="margin-left: 100px;">Keni LLogari?</a>
 
             </div>
@@ -69,6 +69,60 @@
         </div>
     </div>
 
+    <script>
+        function validateLoginForm(){
+            var emri = document.getElementById("emri").value;
+            var mbiemri=document.getElementById("mbiemri").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            var passwordP = document.getElementById("passwordP").value;
+
+            var error =document.getElementById("error");
+
+        /*  if(emri == "" || mbiemri== ""|| email=="" || passwordP==""){
+                alert('Duhet te plotesoni të gjitha fushat');
+                return;
+            } */
+
+
+            let emriRegex = /[a-zA-Z]{2,10}$/;
+            let mbiemriRegex = /[a-zA-Z]{2,10}$/;
+            let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+            let passwordRegex = /(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/
+
+
+            
+
+if(!emriRegex.test(emri)){
+    error.innerHTML = 'Emri jo Valid ';
+    return false;
+}
+
+if(!mbiemriRegex.test(mbiemri)){
+    error.innerHTML = 'Mbiemer jo Valid ';
+    return;
+}
+
+if(!emailRegex.test(email)){
+    error.innerHTML = 'Email jo Valid ';
+    return;
+}
+
+if(!passwordRegex.test(password)){
+    error.innerHTML = 'Password jo Valid ';
+    return;
+}
+
+if(passwordP!=password){
+    error.innerHTML = 'Confirm Password not match with Password';
+    return;
+}
+         
+        }
+
+
+
+    </script>
 
     
 </body>
