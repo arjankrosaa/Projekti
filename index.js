@@ -239,3 +239,22 @@ function NewTab() {
         
         alert('form submitted succesfully!');
     }
+
+
+
+    //reth nesh
+    let i = 0;
+        let imgArray = ['img/1jpg','2.jfif','3.jpg','11.jpg'];
+
+        function changeImg(){
+            document.getElementById('slideshow').src = imgArray[i];
+
+            if(i< imgArray.length -1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            //setTimeout("changeImg()", 2600);
+        }
+        document.addEventListener(onload, changeImg());
