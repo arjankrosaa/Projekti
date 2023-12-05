@@ -150,22 +150,29 @@ for(let j=0;j<butoni.length;j++)
     function validateLoginForm(){
 
     let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
     
 
         let emailInput = document.getElementById('email');
         let emailError = document.getElementById('emailError');
 
+        let pwInput = document.getElementById('password');
+        let pwError = document.getElementById('pwError');
+
         
 
-        var password=document.getElementById("password").value;
 
         emailError.innerText = '';
+        pwError.innerText = '';
     
         if(!emailRegex.test(emailInput.value)){
             emailError.innerText = 'invalid email';
             return;
-        }else if(password == "" ){
-            alert('Passwordi nuk duhet te jete i Zbraset!');
+        }
+
+        if(!passwordRegex.test(pwInput.value)){
+            pwError.innerHTML = 'invalid password! ';
             return;
         }
         
@@ -175,6 +182,7 @@ for(let j=0;j<butoni.length;j++)
         document.getElementById('password').value="";
      
         document.getElementById('emailError').value="";
+        document.getElementById('pwError').value="";
     }
 
 

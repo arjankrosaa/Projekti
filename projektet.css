@@ -178,9 +178,18 @@
 
 
 .vlersimetBTN{
-    background-color: var(--gri);
+    background-color: var(--primare);
     width: 80px;
+    border: none;
+    height: 40px;
+    border-radius: 30px;
     cursor: pointer;
+
+}
+
+.vlersimetBTN:hover{
+    background-color: var(--gri);
+    transition: 0.5s;
 }
 
 #slideshow{
