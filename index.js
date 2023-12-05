@@ -1,4 +1,4 @@
-//llogaritja e dimensioneve tek kalkulatori
+
 
 function llogaritDimensionet(value){
     var rezultati;
@@ -17,34 +17,34 @@ function NewTab() {
 
 
 
-        const butoni=document.querySelectorAll(".button");
-        const image= document.querySelectorAll(".image");
-        
-        // kushtezimi per filtrim te kategorive
-        
-        for(i=0;i<butoni.length;i++)
-        {
-            butoni[i].addEventListener("click", (e)=>{
-                e.preventDefault();
-                const filter= e.target.dataset.filter;
-                image.forEach((image)=>{
-                    if(filter=== "tegjitha")
+    const butoni=document.querySelectorAll(".button");
+const image= document.querySelectorAll(".image");
+
+// kushtezimi per filtrim te kategorive
+
+for(let j=0;j<butoni.length;j++)
+{
+    butoni[j].addEventListener("click", (e)=>{
+        e.preventDefault();
+        const filter= e.target.dataset.filter;
+        image.forEach((image)=>{
+            if(filter=== "tegjitha")
+            {
+                image.style.display="block";
+            }
+            else {
+                if(image.classList.contains(filter)) 
                     {
-                        image.style.display="block";
+                    image.style.display="block";
                     }
-                    else {
-                        if(image.classList.contains(filter)) 
-                            {
-                            image.style.display="block";
-                            }
-                        else{
-                            image.style.display="none";
-                        }    
-                    }     
-                }) 
-                
-            })
-        }
+                else{
+                    image.style.display="none";
+                }    
+            }     
+        }) 
+        
+    })
+}
 
       function shfaqPunimet(){
             document.getElementById("shfaq").style.display="block";
@@ -142,74 +142,6 @@ function NewTab() {
 
 
 
-        function getValue(){
-            let txt =document.getElementById("txt");
-            let txtValue= txt.value;
-    
-            let result= document.getElementById("result2");
-            result.innerText=txtValue;
-    
-    
-            if(txtValue.length < '5' || !(txtValue.indexOf(" ") >= 0)){
-                result.innerText=txtValue + " ❌";
-                result.style.color= 'red';
-               }else{
-                result.innerText=txtValue + " ✔";
-                result.style.color= 'green';
-            }
-    
-    }
-        function getValue2(){
-            let txt =document.getElementById("email");
-            let txtValue= txt.value;
-    
-            let result= document.getElementById("result3");
-            result.innerText=txtValue;
-    
-    
-            if( txtValue.includes("@") && txtValue.length > '3' ){
-                result.innerText=txtValue 
-                result.style.color= 'LightCoral';
-                if(txtValue.includes(".")   ){
-                    result.style.color= 'green';
-                    result.innerText=txtValue + " ✔";
-                    if(txtValue.includes(" ")){
-                        result.style.color= 'red';
-                        result.innerText=txtValue + " ❌";
-                    }
-                    
-                }
-    
-               }else{
-                
-    
-                result.innerText=txtValue + " ❌";
-                result.style.color= 'red';
-            }
-        }
-
-        function validateform2(){
-            var result=document.getElementById("result2");
-            var result2=document.getElementById("result3");
-            var pershkrimi = document.myform.pershkrimi.value;
-
-            if(result.style.color=='red'){
-                alert("Emri nuk i plotson kushte.");
-                return false;
-            }
-
-            if(  !(result2.style.color=='green') ){
-                alert("Emaili nuk i plotson kushte.");
-                return false;
-            }
-
-            if (pershkrimi == null || pershkrimi == "") {
-                alert("Pershkrimi nuk mund te jet i zbrazur");
-                return false;
-            }
-
-        }
-
 
 
 
@@ -238,23 +170,28 @@ function NewTab() {
         }
         
         alert('form submitted succesfully!');
+
+        document.getElementById('email').value="";
+        document.getElementById('password').value="";
+     
+        document.getElementById('emailError').value="";
     }
 
 
 
     //reth nesh
-    let i = 0;
+    let f = 0;
         let imgArray = ['img/1jpg','2.jfif','3.jpg','11.jpg'];
 
         function changeImg(){
-            document.getElementById('slideshow').src = imgArray[i];
+            document.getElementById('slideshow').src = imgArray[f];
 
-            if(i< imgArray.length -1){
+            if(f< imgArray.length -1){
                 i++;
             }
             else{
-                i=0;
+                f=0;
             }
-            //setTimeout("changeImg()", 2600);
+            setTimeout("changeImg()", 3600);
         }
         document.addEventListener(onload, changeImg());

@@ -91,3 +91,12 @@
     padding-top: 25px;
 
 }
+
+@media (max-width: 768px) {
+    .title-sher{
+        font-size: 30px;
+    }
+
+
+
+    }

@@ -84,6 +84,7 @@
     text-decoration: none;
     color: white;
     margin: 10px 5px;
+    text-align: center;
 }
 
 
@@ -155,4 +156,81 @@
     display: flex;
     justify-content: space-around;
     
+}
+
+#slideshow div {
+    display: none;
+}
+#slideshow div.active {
+    display: block;
+}
+
+
+
+#kontenti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    
+}
+
+
+.vlersimetBTN{
+    background-color: var(--gri);
+    width: 80px;
+    cursor: pointer;
+}
+
+#slideshow{
+    width: 750px;
+}
+
+@media (max-width: 768px) {
+    .title-proj{
+        font-size: 30px;
+        
+    }
+
+
+    .category h1{
+        font-size: 16px; 
+    }
+
+    .button {
+    padding: 5px 25px;
+    margin: 8px 4px;
+}
+
+
+.chip {
+    padding: 0 20px;
+    height: 40px;
+    width: 60px;
+    font-size: 11px;
+    
+  }
+  
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  #slideshow{
+    width: 350px;
+  }
+
+  .titulliV{
+    font-size: 16px;
+  }
+
+
+
+
+
+
 }

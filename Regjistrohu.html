@@ -94,31 +94,40 @@
             
 
 if(!emriRegex.test(emri)){
-    error.innerHTML = 'Emri jo Valid ';
+    error.innerHTML = 'Emri jo Valid! ';
     return false;
 }
 
 if(!mbiemriRegex.test(mbiemri)){
-    error.innerHTML = 'Mbiemer jo Valid ';
+    error.innerHTML = 'Mbiemer jo Valid! ';
     return;
 }
 
 if(!emailRegex.test(email)){
-    error.innerHTML = 'Email jo Valid ';
+    error.innerHTML = 'Email jo Valid! ';
     return;
 }
 
 if(!passwordRegex.test(password)){
-    error.innerHTML = 'Password jo Valid ';
+    error.innerHTML = 'Passwordi Duhet te Permbaje Shkronja dhe Numra! ';
     return;
 }
 
 if(passwordP!=password){
-    error.innerHTML = 'Confirm Password not match with Password';
+    error.innerHTML = 'Passwordi duhet te jete i njejt!';
     return;
 }
-         
-        }
+alert('U regjistruat me Sukses!');
+
+    document.getElementById("emri").value = "";
+    document.getElementById("mbiemri").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("passwordP").value = "";
+
+    
+    error.innerHTML = "";
+}
 
 
 

@@ -90,6 +90,14 @@
                 <img src="img/10.jpg">
             </div>
 
+            <div class="image komodina" style="width: 400px;">
+                <img src="img/komodina4.jfif">
+            </div>
+
+            <div class="image kuzhina">
+                <img src="img/kuzhina4.jpg">
+            </div>
+
         </section>
     </div>
 </div>
@@ -105,8 +113,8 @@
 
 <div class="stars">
 <div class="container">
-    <p style="font-size: 18px;">Vlersimet Nga Klientat</p>
 
+  <h4>Vlersimet Nga Klientat</h4>
 
 
 
@@ -234,6 +242,83 @@
 
 </div>
 </div>
+
+
+<div id="kontenti">
+    <header>
+        <h2 class="titulliV">Mendimet e Tyre rreth Projekteve Tona</h2>
+        <div id="slideshow">
+            <div class="slide ">
+                <img src="img/profile.jpg" alt="Person" width="96" height="96">
+                <h4>Ermali</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, tempora consectetur sequi consequuntur corporis deleniti aspernatur at neque magni vel ad dolorum unde, assumenda repudiandae provident autem exercitationem. Sed, inventore..</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star  checked"></span>
+                 <span class="fa fa-star "></span>
+            </div>
+
+            <div class="slide ">
+                <img src="img/profile3.jpg" alt="Person" width="96" height="96">
+                 <h4>Ismajl</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis deleniti suscipit illum, odit asperiores. Asperiores, corrupti ex iusto deserunt quis, dignissimos architecto recusandae velit iste eaque pariatur ullam temporibus.</p>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star  checked"></span>
+                  <span class="fa fa-star checked"></span>
+            </div>
+
+            <div class="slide">
+                <img src="img/profile2.jpg" alt="Person" width="96" height="96">
+                 <h4>Alma</h4>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur accusamus cumque rerum officiis quisquam delectus perspiciatis magni quasi. Eveniet perferendis dolorum ratione aliquam in similique culpa laboriosam veritatis accusantium voluptate!.</p>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star  checked"></span>
+                  <span class="fa fa-star checked"></span>
+            </div>
+
+            <div class="slide ">
+                <img src="img/profile.jpg" alt="Person" width="96" height="96">
+                <h4>Arjani</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sint nisi voluptas, dolore doloremque adipisci soluta harum minus delectus tempore hic odit odio corporis. Beatae amet repellendus eum recusandae quos?.</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star  checked"></span>
+                 <span class="fa fa-star checked"></span>
+            </div>
+
+        </div>
+    </header>
+    <button class="vlersimetBTN" onclick="changeSlide()">Next</button>
+</div>
+
+
+<script>
+   let i = 0;
+const slides = document.querySelectorAll('.slide');
+
+function changeSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+
+    if (i < slides.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+
+    slides[i].classList.add('active');
+}
+
+    document.addEventListener(onload, changeSlide());
+
+    setInterval(changeSlide, 20000);
+</script>
+
 
 
 
