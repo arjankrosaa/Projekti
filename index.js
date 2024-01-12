@@ -8,11 +8,11 @@ function llogaritDimensionet(value){
 
 
 function NewTab() {
-            window.open("Projektet.html" , "_self");
+            window.open("Projektet.php" , "_self");
         }
 
         function newTabContact(){
-        window.open("RrethNesh.html" ,"_self" )
+        window.open("RrethNesh.php" ,"_self" )
     }
 
 

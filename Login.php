@@ -12,11 +12,11 @@
 <body>
     <nav  class="zone">
         <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projektet.html">Projektet</a></li>
-            <li><a href="Sherbimet.html">Sherbimet</a></li>
-            <li><a href="RrethNesh.html">Rreth Nesh</a></li>
-            <li class="push"><a href="Regjistrohu.html">Regjistrohu</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="Projektet.php">Projektet</a></li>
+            <li><a href="Sherbimet.php">Sherbimet</a></li>
+            <li><a href="RrethNesh.php">Rreth Nesh</a></li>
+            <li class="push"><a href="Regjistrohu.php">Regjistrohu</a></li>
 
 
         </ul>
@@ -44,7 +44,7 @@
             
                 <button type="button" onclick="validateLoginForm()">LogIn</button>
               
-                <a href="Regjistrohu.html" class="pallogari" style="margin-left: 110px;">Nuk Keni LLogari?</a>
+                <a href="Regjistrohu.php" class="pallogari" style="margin-left: 110px;">Nuk Keni LLogari?</a>
 
             </form>
             </div>

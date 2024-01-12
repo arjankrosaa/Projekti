@@ -10,11 +10,11 @@
 <body>
     <nav  class="zone">
         <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projektet.html">Projektet</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="Projektet.php">Projektet</a></li>
             <li><a href="#">Sherbimet</a></li>
-            <li><a href="RrethNesh.html">Rreth Nesh</a></li>
-            <li class="push"><a href="Login.html">Login</a></li>
+            <li><a href="RrethNesh.php">Rreth Nesh</a></li>
+            <li class="push"><a href="Login.php">Login</a></li>
 
 
         </ul>
@@ -96,17 +96,17 @@
                 <h4>Info</h4>
                 <ul class="links">
                     <li><a href="#">Home</a></li>
-                    <li><a href="Projektet.html">Projektet</a></li>
-                    <li><a href="Sherbimet.html">Sherbimet</a></li>
-                    <li><a href="RrethNesh.html">Reth-Nesh</a></li>
+                    <li><a href="Projektet.php">Projektet</a></li>
+                    <li><a href="Sherbimet.php">Sherbimet</a></li>
+                    <li><a href="RrethNesh.php">Reth-Nesh</a></li>
                 </ul>
             </div>
 
             <div class="footer-kolon">
                 <h4>Account</h4>
                 <ul class="links">
-                    <li><a href="Login.html">Login</a></li>
-                    <li><a href="Regjistrohu.html">Regjistrohu</a></li>
+                    <li><a href="Login.php">Login</a></li>
+                    <li><a href="Regjistrohu.php">Regjistrohu</a></li>
                 </ul>
             </div>
 

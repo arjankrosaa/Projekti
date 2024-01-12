@@ -23,11 +23,11 @@
 <body>
     <nav  class="zone">
         <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projektet.html">Projektet</a></li>
-            <li><a href="Sherbimet.html">Sherbimet</a></li>
-            <li><a href="RrethNesh.html">Rreth Nesh</a></li>
-            <li class="push"><a href="Login.html">Login</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="Projektet.php">Projektet</a></li>
+            <li><a href="Sherbimet.php">Sherbimet</a></li>
+            <li><a href="RrethNesh.php">Rreth Nesh</a></li>
+            <li class="push"><a href="Login.php">Login</a></li>
 
 
         </ul>
@@ -61,7 +61,7 @@
                 <input type="password"  id="passwordP" ><br>
 
                 <button type="button" onclick="validateLoginForm()">Regjistrohu</button>
-                <a href="Login.html" class="pallogari" style="margin-left: 100px;">Keni LLogari?</a>
+                <a href="Login.php" class="pallogari" style="margin-left: 100px;">Keni LLogari?</a>
 
             </div>
             </form>
