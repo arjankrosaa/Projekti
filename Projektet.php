@@ -1,3 +1,17 @@
+<?php
+  session_start();
+  $hide="";
+  
+  if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == "admin") {
+        $hide = "";
+    } else {
+        $hide = "hide";
+    }
+} else {
+    $hide = "hide";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +23,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <style> .hide{
+        display: none;
+    }
+    
+    </style>
+
     <nav  class="zone">
         <ul class="main-nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="#">Projektet</a></li>
             <li><a href="Sherbimet.php">Sherbimet</a></li>
             <li><a href="RrethNesh.php">Rreth Nesh</a></li>
-            <li class="push"><a href="Login.php">Login</a></li>
+            <?php if (!isset($_SESSION['email'])) : ?>
+                <li class="push"><a href="Login.php">Login</a></li>
+            <?php else : ?>
+                <li class="push"><a href="logout.php">Logout</a></li>
+            <?php endif; ?>
+
+            <li><a href="dashboard.php" class="<?php echo $hide?>" >Dashboard</a></li>
 
 
         </ul>

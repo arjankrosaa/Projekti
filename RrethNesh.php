@@ -1,3 +1,52 @@
+<?php
+  session_start();
+  $hide="";
+  
+  if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == "admin") {
+        $hide = "";
+    } else {
+        $hide = "hide";
+    }
+} else {
+    $hide = "hide";
+}
+
+
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ 
+    $name = $_POST['txt'];
+    $email = $_POST['email'];
+    $message = $_POST['pershkrimi'];
+
+   
+    $conn = new mysqli("localhost", "root", "", "luxeliving");
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Insert data into the database
+    $sql = "INSERT INTO kontakti (emri_mbiemri, email, pershkrimi) VALUES ('$name', '$email', '$message')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Form submitted successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +59,25 @@
     <link rel="stylesheet" href="Sherbimet.css">
 </head>
 <body>
+    <style>
+        .hide{
+        display: none;
+    }
+    </style>
     <nav  class="zone">
         <ul class="main-nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="Projektet.php">Projektet</a></li>
             <li><a href="Sherbimet.php">Sherbimet</a></li>
             <li><a href="#">Rreth Nesh</a></li>
-            <li class="push"><a href="Login.php">Login</a></li>
+            
+            <?php if (!isset($_SESSION['email'])) : ?>
+                <li class="push"><a href="Login.php">Login</a></li>
+            <?php else : ?>
+                <li class="push"><a href="logout.php">Logout</a></li>
+            <?php endif; ?>
+
+            <li><a href="dashboard.php" class="<?php echo $hide?>" >Dashboard</a></li>
 
 
         </ul>
