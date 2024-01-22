@@ -11,6 +11,33 @@
 } else {
     $hide = "hide";
 }
+
+
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the "email" key exists in the $_POST array
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+
+        $conn = new mysqli("localhost", "root", "", "luxeliving");
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "INSERT INTO subscribe (email) VALUES ('$email')"; // Enclose $email in single quotes
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Form submitted successfully!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -385,10 +412,10 @@ function changeSlide() {
               of news, updates, helpful tips, and
               exclusive offers.
             </p>
-            <form action="#">
-              <input type="text" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                            <input type="text" name="email" placeholder="Your email" required>
+                            <button type="submit" name="subscribe">SUBSCRIBE</button>
+              </form>
             <img src="img/instagram.png" alt="" style="width: 50px;cursor: pointer; margin-top: 40px;">
             <img src="img/facebook (1).png" alt="" style="width: 50px;cursor: pointer;">
             <img src="img/whatsapp.png" alt="" style="width: 50px;cursor: pointer;">
