@@ -25,12 +25,27 @@ $result = $conn->query($sql);
 </head>
 <body>
 <style>
-        body {
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px 0 50px;
+        background-color: #ccc;
+    }
+
+    body{
+        background-color: #f2f2f2;
+        
+    }
+
+    
+        .body {
             font-family: 'Arial', sans-serif;
             margin: 20px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            
         }
 
         div {
@@ -87,10 +102,24 @@ $result = $conn->query($sql);
         h2 {
             margin-bottom: 20px;
             color: #333;
+            cursor: pointer;
         }
+
+        @media (max-width: 950px) {
+div{
+    width: 400px;
+}
+}
+
     </style>
-    
-  <h2><a href="index.php">  HOME   </a></h2>
+    <header>
+    <h2><a href="index.php"> <span>&#8592;</span> HOME   </a></h2>
+    <h2 >Luxeliving</h2>
+    </header>
+    <hr>
+
+    <main class="body">
+  
 
 
     <!-- Your existing dashboard content -->
@@ -162,7 +191,7 @@ $result = $conn->query($sql);
     </div>
 
 
-
+   
 
 
 
@@ -198,6 +227,9 @@ $result = $conn->query($sql);
 
 
    
+</main>
+
+<footer><h4 style="text-align: center;" >Copyright @2024</h4></footer>
 
 </body>
 </html>
