@@ -43,7 +43,7 @@ $result = $conn->query($sql);
             font-family: 'Arial', sans-serif;
             margin: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
             
         }
@@ -60,7 +60,7 @@ $result = $conn->query($sql);
         }
 
         div:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         h1 {
@@ -86,7 +86,7 @@ $result = $conn->query($sql);
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #e2f2d2;
         }
 
         a {
@@ -124,7 +124,7 @@ div{
 
     <!-- Your existing dashboard content -->
 
-    <div style="border:1px black solid;width:fit-content">
+    <div style="border:1px black solid;">
     <h1>Contact Form Submissions</h1>
     <hr>
 
@@ -144,10 +144,55 @@ div{
 </div>
 
 <br><br><br>
-<div style="border:1px black solid;width:fit-content">
-<h1>Users</h1>
-<hr>
+
+
+
 <br>
+
+
+ 
+  
+
+
+   
+
+
+
+
+    <div style="border:1px black solid;">
+    <h1>Subscribers</h1>
+    <hr>
+
+    <?php
+    // Fetch contact form data from the database
+$conn = new mysqli("localhost", "root", "", "luxeliving");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM subscribe";
+$result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo "<p><b>ID:</b> " . $row["id"] . "<b>, Email:</b> " . $row["email"]. "</p>";
+        }
+    } else {
+        echo "No Subscribers yet.";
+    }
+
+    $conn->close();
+    ?>
+
+</div>
+
+
+   
+</main>
+<hr>
+<h2 style="text-align:center;" >Users</h2>
 <table border="1">
              <tr>
                  <th>ID</th>
@@ -187,47 +232,52 @@ div{
              
              ?>
     </table>
- 
-    </div>
 
 
+<br><br>
+<hr>
+<h2 style="text-align:center;" >Top Produktet Javore</h2>
+<table border="1">
    
+             <tr>
+                 <th>ID</th>
+                 <th>Image</th>
+                 <th>text</th>
+                 <th><a href='produkti.php?id=$produkti[id]'>ADD NEW</a></th>
+                 
+                 
+             </tr>
+
+             <?php 
+             include_once 'repository/produktiRepository.php';
+
+             $produktiRepository = new ProduktiRepository();
+
+             $produktet = $produktiRepository->getAllProducts();
+
+             foreach($produktet as $produkti){
+                echo 
+                "
+                <tr>
+                     <td>$produkti[id]</td>
+                     <td>$produkti[image]</td>
+                     <td>$produkti[text] </td>
+                     <td><a href='deleteProduct.php?id=$produkti[id]'>Delete</a></td>
+                    
+                     
+                </tr>
+                ";
+             }
+
+             
+             
+             ?>
+    </table>
+
+    
 
 
 
-
-    <div style="border:1px black solid;width:fit-content">
-    <h1>Subscribers</h1>
-    <hr>
-
-    <?php
-    // Fetch contact form data from the database
-$conn = new mysqli("localhost", "root", "", "luxeliving");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM subscribe";
-$result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // Output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo "<p><b>ID:</b> " . $row["id"] . "<b>, Email:</b> " . $row["email"]. "</p>";
-        }
-    } else {
-        echo "No Subscribers yet.";
-    }
-
-    $conn->close();
-    ?>
-
-</div>
-
-
-   
-</main>
 
 <footer><h4 style="text-align: center;" >Copyright @2024</h4></footer>
 

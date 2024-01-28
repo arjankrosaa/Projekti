@@ -57,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -127,14 +128,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
 
-    <div class="produkti-javes">
-       
-        <div class="pro-img">
+<!----     <div class="pro-img">
             <img class="BENTLEY" src="img/BENTLEY.png" alt="">
             
         </div>
             <h3>PRODUKTI I JAVËS <br> Bentley</h3>    
     </div>
+    --->
+
+
+    <?php
+include_once 'repository/produktiRepository.php';
+
+$produktiRepository = new ProduktiRepository();
+
+$produktet = $produktiRepository->getAllProducts();
+
+$lastProdukt = end($produktet);
+?>
+
+<div class="produkti-javes">
+    
+    <div class="pro-img">
+        <?php echo "<img class='BENTLEY' src='img/{$lastProdukt['image']}' alt='Product Image'>"; ?>
+    </div>
+    <button class="<?php echo $hide?>" style="height:35px;border-radius:10px;cursor:pointer;" onclick="addProduct()" ><i class="fa fa-pencil"></i>Ndrro Produktin</button>
+    <script>
+        function addProduct() {
+  window.location.href = "produkti.php";
+}
+    </script>
+    
+    <h3>PRODUKTI I JAVËS <br><?php echo $lastProdukt['text']; ?></h3>
+    
+</div>
+
+
+
 
 
     <div class="deget">
